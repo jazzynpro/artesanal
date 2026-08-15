@@ -3,6 +3,7 @@ package com.krakedev.artesanal.testJUnit;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+
 import org.junit.jupiter.api.Test;
 
 import com.krakedev.artesanal.Maquina;
@@ -28,10 +29,10 @@ public class TestRecargarJUnit {
 		
 		negra.recargarCerveza(7000);
 		
-		boolean resultado = negra.recargarCerveza(1000);
+		boolean resultado = negra.recargarCerveza(500);
 		
 		assertTrue(resultado);
-		assertEquals(3000, negra.getCantidadActual(), 0.0001);
+		assertEquals(7500, negra.getCantidadActual(), 0.0001);
 	
 	}
 }

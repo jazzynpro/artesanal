@@ -85,13 +85,13 @@ public class Maquina {
 	
 	// Metodo public que no retorna no recibe parametros
 	public void llenarMaquina() {
-		this.cantidadActual = this.capacidadMaxima - 100;
+		this.cantidadActual = this.capacidadMaxima - 200;
 	}
 
 	// Metodo recargar cerveza con un if
 	public boolean recargarCerveza(double cantidad) {
-		double limitePermitido = capacidadMaxima - 100;
-		if(cantidadActual + cantidad <= limitePermitido) {
+		double limitePermitido = capacidadMaxima - 200;
+		if(cantidadActual + cantidad < limitePermitido) {
 			cantidadActual = cantidadActual + cantidad;
 			return true;
 		}else {

@@ -18,14 +18,14 @@ public class TestServir {
 		
 		System.out.println("--------SERVIR 2000ML--------");
 		double valor1;
-		valor1= rubia.servirCerveza(2000);
+		valor1= rubia.servirCerveza(4000);
 		System.out.println("Valor a pagar " +valor1);
 		
 		rubia.imprimir();
 		
 		System.out.println("--------SERVIR 6000ML--------");
 		double valor2;
-		valor2= rubia.servirCerveza(6000);
+		valor2= rubia.servirCerveza(4800);
 		System.out.println("Valor a pagar " +valor2);
 	}
 
