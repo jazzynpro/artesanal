@@ -6,14 +6,14 @@ public class TestLlenar {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Maquina rubia = new Maquina("Pilsener","Cerveza fria", 0.02, 8000);
+		Maquina rubia = new Maquina("Pilsener","Cerveza fria", 0.02, 8000, 13.00);
 		rubia.imprimir();
 		
 		//llenar la maquina
 		rubia.llenarMaquina();
 		rubia.imprimir();
 		
-		Maquina negra = new Maquina("Club", "Cerveza buena", 0.03);
+		Maquina negra = new Maquina("Club", "Cerveza buena", 0.03, 14.00);
 		negra.imprimir();
 	}
 

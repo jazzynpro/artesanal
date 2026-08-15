@@ -7,7 +7,7 @@ public class TestRecargar {
 	public static void main(String[] args) {
 		
 		boolean resultado; //para guardar la variable
-		Maquina rubia = new Maquina("Pilsener", "Cerveza fria", 0.02, 8000);
+		Maquina rubia = new Maquina("Pilsener", "Cerveza fria", 0.02, 8000, 13.00);
 		
 
 			System.out.println("--------ESTADO INICIAL--------");

@@ -6,7 +6,7 @@ public class TestAtributos {
 
 	public static void main(String[] args) {
 		//Instanciar
-		Maquina rubia = new Maquina("Pilsener", "cerveza rubia", 0.02,10000);
+		Maquina rubia = new Maquina("Pilsener", "cerveza rubia", 0.02,10000, 12.00);
 		
 		rubia.imprimir();
 		rubia.setNombreCerveza("Golden Ale");

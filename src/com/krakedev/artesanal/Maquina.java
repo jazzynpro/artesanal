@@ -7,23 +7,26 @@ public class Maquina {
 	private double precioPorMl;
 	private double capacidadMaxima;
 	private double cantidadActual;
+	private double codigo;
 
 	// Constructores public y nombre de la clase
-	public Maquina(String nombreCerveza, String descripcion, double precioPorMl, double capacidadMaxima) {
+	public Maquina(String nombreCerveza, String descripcion, double precioPorMl, double capacidadMaxima, double codigo) {
 		this.nombreCerveza = nombreCerveza;
 		this.descripcion = descripcion;
 		this.precioPorMl = precioPorMl;
 		this.capacidadMaxima = capacidadMaxima;
 		this.cantidadActual = 0;
+		this.codigo = codigo;
 	}
 
 	// Constructores public y nombre de la clase
-	public Maquina(String nombreCerveza, String descripcion, double precioPorMl) {
+	public Maquina(String nombreCerveza, String descripcion, double precioPorMl, double codigo) {
 		this.nombreCerveza = nombreCerveza;
 		this.descripcion = descripcion;
 		this.precioPorMl = precioPorMl;
 		this.capacidadMaxima = 10000;
 		this.cantidadActual = 0;
+		this.codigo = codigo;
 	}
 
 	public String getNombreCerveza() {
@@ -61,14 +64,25 @@ public class Maquina {
 	}
 	// quitamos el set de cantidad Aactual para que nadie pueda modificar
 
+	//Atributo getCodigo
+	public double getCodigo() {
+		return codigo;
+	}
+
+	
 	// Metodo de Imprimir
 	public void imprimir() {
 		String mensaje;
-		mensaje = "Nombre cerveza; " + nombreCerveza + " ,Descripcion: " + descripcion + " ,Precio por Ml: "
-				+ precioPorMl + " ,Capacidad Máxima: " + capacidadMaxima + " ,Cantidad Actual: " + cantidadActual;
+		mensaje = "Nombre cerveza; " + nombreCerveza + 
+				" ,Descripcion: " + descripcion + 
+				" ,Precio por Ml: " + precioPorMl + 
+				" ,Capacidad Máxima: " + capacidadMaxima + 
+				" ,Cantidad Actual: " + cantidadActual+
+				" ,Código: " + codigo;
 		System.out.println(mensaje);
 	}
 
+	
 	// Metodo public que no retorna no recibe parametros
 	public void llenarMaquina() {
 		this.cantidadActual = this.capacidadMaxima - 100;
