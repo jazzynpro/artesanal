@@ -23,6 +23,7 @@ public int getUltimoCodigo() {
 	// Inicializar el ArrayList en el constructor para evitar NullPointerException
     public NegocioMejorado() {
         this.maquinas = new ArrayList<Maquina>();
+        this.clientes = new ArrayList<Cliente>();
     }
 
  // Getters y Setters
