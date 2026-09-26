@@ -102,5 +102,27 @@ public int getUltimoCodigo() {
      //Agregar el objeto a la lista de clientes
      clientes.add(nuevoCliente);
  }
+ 
+//Metodo buscarClientePorCedula
+//Recibe la cédula, recorre la lista con un bucle for y retorna el Cliente si coincide, o null si no existe.
+public Cliente buscarClientePorCedula(String cedula) {
+  // Validación previa de seguridad
+  if (cedula == null || clientes == null) {
+      return null;
+  }
+
+  // Recorrido de la lista de clientes con bucle for
+  for (int i = 0; i < clientes.size(); i++) {
+      Cliente c = clientes.get(i);
+      
+      // Verificamos que el objeto no sea nulo y comparamos la cédula usando .equals()
+      if (c != null && c.getCedula() != null && c.getCedula().equals(cedula)) {
+          return c; // Cliente encontrado
+      }
+  }
+
+  // Si recorrió toda la lista sin encontrar coincidencias
+  return null;
+}
 
 }
