@@ -6,9 +6,11 @@ public class NegocioMejorado {
 // Atributo maquinas del tipo ArrayList de Maquina
     private ArrayList<Maquina> maquinas;
     
- //Atributo para la lista de clientes (Nivel de clase) Se declara SIN inicializar
+ //Atributo para la lista de clientes (NO INICIALIZAR AQUÍ NI EN EL CONSTRUCTOR)
     private ArrayList<Cliente> clientes;
     
+// Contador para la secuencia de códigos de clientes
+    private int ultimoCodigo = 0;
 // Inicializar el ArrayList en el constructor para evitar NullPointerException
     public NegocioMejorado() {
         this.maquinas = new ArrayList<Maquina>();
