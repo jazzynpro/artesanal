@@ -42,4 +42,16 @@ public class NegocioMejorado {
         maquinas.add(nuevaMaquina);
     }
     
+ //Metodo cargarMaquinas
+    public void cargarMaquinas() {
+        // Recorrer la lista de máquinas con un bucle for
+        for (int i = 0; i < maquinas.size(); i++) {
+            // Obtener la máquina actual en la posición i
+            Maquina m = maquinas.get(i);
+            
+            // Invocar al método llenarMaquina() de la máquina recuperada
+            m.llenarMaquina();
+        }
+    }
+    
 }
