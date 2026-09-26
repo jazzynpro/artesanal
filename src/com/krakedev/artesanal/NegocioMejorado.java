@@ -125,4 +125,24 @@ public Cliente buscarClientePorCedula(String cedula) {
   return null;
 }
 
+//Metodo buscarClientePorCodigo
+//Recibe el código del cliente, recorre la lista con un bucle for y retorna el objeto Cliente si coincide, o null si no existe.
+public Cliente buscarClientePorCodigo(String codigo) {
+ // Validación de seguridad por si el parámetro o la lista vienen nulos
+ if (codigo == null || clientes == null) {
+     return null;
+ }
+ // Recorrido de la lista de clientes
+ for (int i = 0; i < clientes.size(); i++) {
+     Cliente c = clientes.get(i);
+     // Comparamos el código del cliente actual usando .equals()
+     if (c != null && c.getCodigo() != null && c.getCodigo().equals(codigo)) {
+         return c; // Cliente encontrado
+     }
+ }
+
+ // Si recorrió toda la lista sin encontrar coincidencias
+ return null;
+}
+
 }
