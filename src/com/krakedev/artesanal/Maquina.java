@@ -7,10 +7,10 @@ public class Maquina {
 	private double precioPorMl;
 	private double capacidadMaxima;
 	private double cantidadActual;
-	private double codigo;
+	private String codigo;
 
 	// Constructores public y nombre de la clase
-	public Maquina(String nombreCerveza, String descripcion, double precioPorMl, double capacidadMaxima, double codigo) {
+	public Maquina(String nombreCerveza, String descripcion, double precioPorMl, double capacidadMaxima, String codigo) {
 		this.nombreCerveza = nombreCerveza;
 		this.descripcion = descripcion;
 		this.precioPorMl = precioPorMl;
@@ -20,7 +20,7 @@ public class Maquina {
 	}
 
 	// Constructores public y nombre de la clase
-	public Maquina(String nombreCerveza, String descripcion, double precioPorMl, double codigo) {
+	public Maquina(String nombreCerveza, String descripcion, double precioPorMl, String codigo) {
 		this.nombreCerveza = nombreCerveza;
 		this.descripcion = descripcion;
 		this.precioPorMl = precioPorMl;
@@ -65,7 +65,7 @@ public class Maquina {
 	// quitamos el set de cantidad Aactual para que nadie pueda modificar
 
 	//Atributo getCodigo
-	public double getCodigo() {
+	public String getCodigo() {
 		return codigo;
 	}
 

@@ -20,7 +20,7 @@ public class NegocioMejorado {
         this.maquinas = maquinas;
     }
     
-    // Método generarCodigo return código tipo M-25 usar Math.random() del 1 al 100
+    // Metodo generarCodigo return código tipo M-25 usar Math.random() del 1 al 100
     public String generarCodigo() {
         // Generar aleatorio entre 1 y 100
         int numeroAleatorio = (int) (Math.random() * 100) + 1;
@@ -28,6 +28,18 @@ public class NegocioMejorado {
         // Concatenar el M- con el número generado
         String codigoGenerado = "M-" + numeroAleatorio;
         return codigoGenerado;
+    }
+    
+ //Metodo agregarMaquina
+    public void agregarMaquina(String nombreCerveza, String descripcion, double precioPorMl) {
+        // Generar el código dinámico invocando al método interno generarCodigo()
+        String codigoGenerado = generarCodigo();
+        
+        //Crear una nueva instancia de Maquina pasando los parámetros recibidos y el código generado
+        Maquina nuevaMaquina = new Maquina(nombreCerveza, descripcion, precioPorMl, codigoGenerado);
+        
+        //Agregar el objeto Maquina a la lista 'maquinas'
+        maquinas.add(nuevaMaquina);
     }
     
 }
