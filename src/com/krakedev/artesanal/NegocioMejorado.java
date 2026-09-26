@@ -31,15 +31,22 @@ public class NegocioMejorado {
     }
     
  //Metodo agregarMaquina
-    public void agregarMaquina(String nombreCerveza, String descripcion, double precioPorMl) {
+    public boolean agregarMaquina(String nombreCerveza, String descripcion, double precioPorMl) {
         // Generar el código dinámico invocando al método interno generarCodigo()
         String codigoGenerado = generarCodigo();
         
-        //Crear una nueva instancia de Maquina pasando los parámetros recibidos y el código generado
-        Maquina nuevaMaquina = new Maquina(nombreCerveza, descripcion, precioPorMl, codigoGenerado);
+     //Validar si ya existe una máquina con ese código en la lista
+        Maquina maquinaExistente = recuperarMaquina(codigoGenerado);
         
-        //Agregar el objeto Maquina a la lista 'maquinas'
-        maquinas.add(nuevaMaquina);
+     //3. Si NO existe (recuperarMaquina devuelve null), se agrega la nueva máquina
+        if (maquinaExistente == null) {
+            Maquina nuevaMaquina = new Maquina(nombreCerveza, descripcion, precioPorMl, codigoGenerado);
+            maquinas.add(nuevaMaquina);
+            return true; // Retorna true indicando que fue agregada exitosamente
+        } else {
+            // Si ya existía, no se agrega
+            return false; // Retorna false indicando duplicado
+        }
     }
     
  //Metodo cargarMaquinas
@@ -54,7 +61,7 @@ public class NegocioMejorado {
         }
     }
     
- // 6. Metodo recuperarMaquina
+ //Metodo recuperarMaquina
  // Recibe el código de la máquina, recorre la lista y la retorna si coincide.
  // Si no la encuentra, retorna null.
  public Maquina recuperarMaquina(String codigo) {
@@ -67,5 +74,6 @@ public class NegocioMejorado {
      }
      return null; // Si termina el bucle y no hubo coincidencia
  }
-    
+ 
+
 }
