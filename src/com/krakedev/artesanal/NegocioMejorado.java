@@ -11,7 +11,16 @@ public class NegocioMejorado {
     
 // Contador para la secuencia de códigos de clientes
     private int ultimoCodigo = 0;
-// Inicializar el ArrayList en el constructor para evitar NullPointerException
+    
+public int getUltimoCodigo() {
+		return ultimoCodigo;
+	}
+
+	public void setUltimoCodigo(int ultimoCodigo) {
+		this.ultimoCodigo = ultimoCodigo;
+	}
+
+	// Inicializar el ArrayList en el constructor para evitar NullPointerException
     public NegocioMejorado() {
         this.maquinas = new ArrayList<Maquina>();
     }
@@ -80,5 +89,17 @@ public class NegocioMejorado {
      return null; // Si termina el bucle y no hubo coincidencia
  }
  
+//Metodo registrarCliente
+ public void registrarCliente(String nombre, String cedula) {
+     //Generar código con lógica de ultimoCodigo
+     ultimoCodigo = ultimoCodigo + 1;
+     String codigoCliente = "C-" + ultimoCodigo;
+     
+     //Crear instancia de Cliente
+     Cliente nuevoCliente = new Cliente(codigoCliente, nombre, cedula);
+     
+     //Agregar el objeto a la lista de clientes
+     clientes.add(nuevoCliente);
+ }
 
 }
